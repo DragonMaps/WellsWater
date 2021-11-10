@@ -10,7 +10,7 @@ import os as os
 import tarfile
 import datetime as dt
 
-st.write('loaded 9 modules')
+#st.write('loaded 9 modules')
 
 riverbasins_gdf = gpd.read_file("riverbasins.geojson")
 co_counties_gdf = gpd.read_file("co_counties.geojson")
@@ -24,12 +24,8 @@ co_counties_gdf.isnull().sum().sum()
 cmax = max(co_counties_gdf['Wells'])
 cmin = min(co_counties_gdf['Wells'])
 
-st.write(cmin, cmax)
-
 bmax = max(riverbasins_gdf['Wells'])
 bmin = min(riverbasins_gdf['Wells'])
-
-st.write(bmin, bmax)
 
 st.subheader("Colorado Water Wells by County and River Basin")
 
