@@ -35,12 +35,12 @@ water_map = fl.Map(location=[co_counties_gdf.centroid.y.mean(),
                 zoom_start=7,tiles=None)
 fl.TileLayer('Stamen Toner',name='BackGround',control=False).add_to(water_map)
 
-colormap_counties = cm.linear.YlGnBu_09.scale(0,cmax)
+colormap_counties = cm.linear.Set1_09.scale(0,cmax)
 
 colormap_counties.caption = 'Number of Wells in County'
 colormap_counties.add_to(water_map)
 
-colormap_basins = cm.linear.PuRd_09.scale(0,bmax)
+colormap_basins = cm.linear.Accent_08.scale(0,bmax)
 
 colormap_basins.caption = 'Number of Wells in Basin'
 colormap_basins.add_to(water_map)
